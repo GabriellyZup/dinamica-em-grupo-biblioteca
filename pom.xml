@@ -8,10 +8,10 @@
 		<version>3.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.dinamica-em-grupo-biblioteca</groupId>
-	<artifactId>dinamica-em-grupo-biblioteca</artifactId>
+	<groupId>br.com</groupId>
+	<artifactId>biblioteca</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dinamica-em-grupo-biblioteca</name>
+	<name>biblioteca</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

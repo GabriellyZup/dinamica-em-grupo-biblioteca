@@ -7,6 +7,9 @@ import br.com.biblioteca.repositories.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class LivroService {
 
@@ -33,5 +36,14 @@ public class LivroService {
 
         LivroModel livroAtualizado = livroRepository.save(livro);
         return new LivroResponseDTO(livroAtualizado.getId(), livroAtualizado.getTitulo(), livroAtualizado.getAutor(), livroAtualizado.getAnoPublicacao());
+    }
+    public List<LivroResponseDTO> listarTodos() {
+        return livroRepository.findAll()
+                .stream()
+                .map(livro -> new LivroResponseDTO(livro.getId(), livro.getTitulo(), livro.getAutor(), livro.getAnoPublicacao()))
+                .collect(Collectors.toList());
+    }
+    public void deletar(Long id) {
+        livroRepository.deleteById(id);
     }
 }

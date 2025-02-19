@@ -37,7 +37,7 @@ public class LivroService {
         LivroModel livroAtualizado = livroRepository.save(livro);
         return new LivroResponseDTO(livroAtualizado.getId(), livroAtualizado.getTitulo(), livroAtualizado.getAutor(), livroAtualizado.getAnoPublicacao());
     }
-    public List<LivroResponseDTO> listarTodos() {
+    public List<LivroResponseDTO> listarLivros() {
         return livroRepository.findAll()
                 .stream()
                 .map(livro -> new LivroResponseDTO(livro.getId(), livro.getTitulo(), livro.getAutor(), livro.getAnoPublicacao()))

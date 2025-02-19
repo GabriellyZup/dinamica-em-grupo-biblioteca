@@ -26,7 +26,7 @@ public class LivroService {
         return new LivroResponseDTO(livroSalvo.getId(), livroSalvo.getTitulo(), livroSalvo.getAutor(), livroSalvo.getAnoPublicacao());
     }
 
-    public LivroResponseDTO atualizar(Long id, LivroRequestDTO livroDTO) {
+    public LivroResponseDTO atualizarLivros(Long id, LivroRequestDTO livroDTO) {
         LivroModel livro = livroRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Livro não encontrado"));
 

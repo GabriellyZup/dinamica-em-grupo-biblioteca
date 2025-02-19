@@ -1,4 +1,4 @@
-package br.com.biblioteca;
+package src.test.br.com.biblioteca;
 
 import org.testng.annotations.Test;
 import org.springframework.boot.test.context.SpringBootTest;

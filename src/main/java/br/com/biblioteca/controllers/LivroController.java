@@ -21,7 +21,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/livros")
 public class LivroController {
-    private LivroService livroService;
 
     private final LivroService livroService;
 

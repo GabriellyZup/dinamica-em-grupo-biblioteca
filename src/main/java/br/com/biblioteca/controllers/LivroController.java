@@ -1,8 +1,5 @@
 package br.com.biblioteca.controllers;
 
-
-
-
 import org.springframework.web.bind.annotation.*;
 
 import br.com.biblioteca.dtos.LivroRequestDTO;
@@ -41,5 +38,4 @@ public class LivroController {
         livroService.deletar(id);
         return ResponseEntity.ok().build();
     }
-
 }

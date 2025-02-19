@@ -43,5 +43,7 @@ public class LivroService {
                 .map(livro -> new LivroResponseDTO(livro.getId(), livro.getTitulo(), livro.getAutor(), livro.getAnoPublicacao()))
                 .collect(Collectors.toList());
     }
-
+    public void deletar(Long id) {
+        livroRepository.deleteById(id);
+    }
 }
